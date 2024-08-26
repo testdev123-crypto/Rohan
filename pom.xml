@@ -14,9 +14,9 @@
 	<name>School</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
-		<java.version>11</java.version>
-		<mvn.compiler.source>11</mvn.compiler.source>
-		<mvn.compiler.target>11</mvn.compiler.target>
+		<java.version>17</java.version>
+		<mvn.compiler.source>17</mvn.compiler.source>
+		<mvn.compiler.target>17</mvn.compiler.target>
 		<cxf.version>4.0.3</cxf.version>
 
 
