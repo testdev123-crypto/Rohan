@@ -1,4 +1,4 @@
-name: SonarCloud
+name: Sonar Scan
 
 on:
   push:
@@ -14,8 +14,8 @@ jobs:
       - name: Setup Java
         uses: actions/setup-java@v4
         with:
-         distribution: 'temurin'
-         java-version: '17'
+          distribution: 'temurin'
+          java-version: '17'
       - name: Build Project
         run: mvn clean install -DskipTests
       - name: SonarQube Scan
@@ -24,4 +24,3 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: 'https://sonarcloud.io/'
 
- 
