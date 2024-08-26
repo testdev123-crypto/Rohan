@@ -18,6 +18,7 @@
 		<mvn.compiler.source>17</mvn.compiler.source>
 		<mvn.compiler.target>17</mvn.compiler.target>
 		<cxf.version>4.0.3</cxf.version>
+		<sonar.projectKey>testdev123-crypto_Rohan</sonar.projectKey>
 		<sonar.organization>testdev123-crypto</sonar.organization>
 		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
 
