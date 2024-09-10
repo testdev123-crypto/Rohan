@@ -1,0 +1,33 @@
+name: SonarQube Scan
+
+on:
+  push:
+    branches:
+      - main  # You can change this to your preferred branch
+
+jobs:
+  sonarQube:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up JDK 11
+        uses: actions/setup-java@v1
+        with:
+          java-version: '11'
+
+      - name: Cache SonarQube packages
+        uses: actions/cache@v2
+        with:
+          path: ~/.sonar/cache
+          key: ${{ runner.os }}-sonar
+
+      - name: Run SonarQube analysis
+        run: |
+          mvn clean verify sonar:sonar \
+            -Dsonar.projectKey=myusername_myrepository \
+            -Dsonar.host.url=http://localhost:9000 \
+            -Dsonar.login=squ_75103e00bdd50172378e56044918a082b018b803
+
