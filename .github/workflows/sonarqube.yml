@@ -3,7 +3,11 @@ name: SonarQube Scan
 on:
   push:
     branches:
-      - main  # You can change this to your preferred branch
+      - main
+      - 'release/*'
+      - 'feature/*'
+  pull_request:
+    types: [ opened, synchronize, reopened ]
   workflow_dispatch:
 
 jobs:
